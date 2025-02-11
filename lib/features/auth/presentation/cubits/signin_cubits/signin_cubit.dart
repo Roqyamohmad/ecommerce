@@ -30,7 +30,6 @@ class SigninCubit extends Cubit<SigninState> {
       (userEntity) => emit(SigninSuccess(userEntity: userEntity)),
     );
   }
-  /*
 
   Future<void> signinWithFacebook() async {
     emit(SigninLoading());
@@ -49,5 +48,4 @@ class SigninCubit extends Cubit<SigninState> {
       (userEntity) => emit(SigninSuccess(userEntity: userEntity)),
     );
   }
-  */
 }
