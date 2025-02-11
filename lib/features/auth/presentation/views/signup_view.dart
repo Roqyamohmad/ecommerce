@@ -1,7 +1,10 @@
+import 'package:Ecommerce/core/services/get_it_service.dart';
 import 'package:Ecommerce/core/widgets/custom_app_bar.dart';
-import 'package:Ecommerce/features/auth/presentation/views/widgets/signin_view_body.dart';
-import 'package:Ecommerce/features/auth/presentation/views/widgets/signup_view_body.dart';
+import 'package:Ecommerce/features/auth/domain/repos/auth_repo.dart';
+import 'package:Ecommerce/features/auth/presentation/cubits/signup_cubits/signup_cubit.dart';
+import 'package:Ecommerce/features/auth/presentation/views/widgets/signup_view_body_bloc_consumer.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignupView extends StatelessWidget {
   const SignupView({super.key});
@@ -9,9 +12,14 @@ class SignupView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: buildAppBar(context, title: 'حساب جديد'),
-      body: const SignupViewBody(),
+    return BlocProvider(
+      create: (context) => SignupCubit(
+        getIt<AuthRepo>(),
+      ),
+      child: Scaffold(
+        appBar: buildAppBar(context, title: 'حساب جديد'),
+        body: const SignupViewBodyBlocConsumer(),
+      ),
     );
   }
 }

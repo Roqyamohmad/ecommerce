@@ -47,7 +47,7 @@ class PageViewItem extends StatelessWidget {
                     Prefs.setBool(kIsOnBoardingViewSeen, true);
 
                     Navigator.of(context).pushReplacementNamed(
-                      SignInView.routeName,
+                      SigninView.routeName,
                     );
                   },
                   child: Padding(
