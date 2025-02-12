@@ -18,7 +18,7 @@ class SignupCubit extends Cubit<SignupState> {
         SignupFailure(message: failure.message),
       ),
       (userEntity) => emit(
-        SignupSuccess(userEntity: userEntity),
+        SignupSuccess(userEntity: userEntity, message: 'تمت العمليه بنجاح'),
       ),
     );
   }

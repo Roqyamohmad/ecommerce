@@ -9,8 +9,9 @@ final class SigninLoading extends SigninState {}
 
 final class SigninSuccess extends SigninState {
   final UserEntity userEntity;
+  final String message;
 
-  SigninSuccess({required this.userEntity});
+  SigninSuccess({required this.userEntity, required this.message});
 }
 
 final class SigninFailure extends SigninState {

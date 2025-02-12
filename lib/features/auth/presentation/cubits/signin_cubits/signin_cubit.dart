@@ -18,7 +18,8 @@ class SigninCubit extends Cubit<SigninState> {
     );
     result.fold(
       (failure) => emit(SigninFailure(message: failure.message)),
-      (userEntity) => emit(SigninSuccess(userEntity: userEntity)),
+      (userEntity) => emit(
+          SigninSuccess(userEntity: userEntity, message: 'تمت العمليه بنجاح')),
     );
   }
 
@@ -27,7 +28,8 @@ class SigninCubit extends Cubit<SigninState> {
     var result = await authRepo.signinWithGoogle();
     result.fold(
       (failure) => emit(SigninFailure(message: failure.message)),
-      (userEntity) => emit(SigninSuccess(userEntity: userEntity)),
+      (userEntity) => emit(
+          SigninSuccess(userEntity: userEntity, message: 'تمت العمليه بنجاح')),
     );
   }
 
@@ -36,7 +38,8 @@ class SigninCubit extends Cubit<SigninState> {
     var result = await authRepo.signinWithFacebook();
     result.fold(
       (failure) => emit(SigninFailure(message: failure.message)),
-      (userEntity) => emit(SigninSuccess(userEntity: userEntity)),
+      (userEntity) => emit(
+          SigninSuccess(userEntity: userEntity, message: 'تمت العمليه بنجاح')),
     );
   }
 
@@ -45,7 +48,8 @@ class SigninCubit extends Cubit<SigninState> {
     var result = await authRepo.signinWithApple();
     result.fold(
       (failure) => emit(SigninFailure(message: failure.message)),
-      (userEntity) => emit(SigninSuccess(userEntity: userEntity)),
+      (userEntity) => emit(
+          SigninSuccess(userEntity: userEntity, message: 'تمت العمليه بنجاح')),
     );
   }
 }

@@ -103,22 +103,22 @@ class _SigninViewBodyState extends State<SigninViewBody> {
               const SizedBox(
                 height: 16,
               ),
-              Platform.isIOS
-                  ? Column(
-                      children: [
-                        SocialLoginButton(
-                          onPressed: () {
-                            context.read<SigninCubit>().signinWithApple();
-                          },
-                          image: Assets.imagesApplIcon,
-                          title: 'تسجيل بواسطة أبل',
-                        ),
-                        const SizedBox(
-                          height: 16,
-                        ),
-                      ],
-                    )
-                  : const SizedBox(),
+              //  Platform.isIOS
+              // ? Column(
+              //   children: [
+              SocialLoginButton(
+                onPressed: () {
+                  context.read<SigninCubit>().signinWithApple();
+                },
+                image: Assets.imagesApplIcon,
+                title: 'تسجيل بواسطة أبل',
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              // ],
+              // )
+              //  : const SizedBox(),
               SocialLoginButton(
                 onPressed: () {
                   context.read<SigninCubit>().signinWithFacebook();

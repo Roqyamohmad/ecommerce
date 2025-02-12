@@ -4,7 +4,6 @@ import 'package:Ecommerce/features/auth/presentation/cubits/signin_cubits/signin
 import 'package:Ecommerce/features/auth/presentation/views/widgets/signin_view_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class SigninViewBodyBlocConsumer extends StatelessWidget {
   const SigninViewBodyBlocConsumer({
@@ -17,6 +16,7 @@ class SigninViewBodyBlocConsumer extends StatelessWidget {
       listener: (context, state) {
         if (state is SigninSuccess) {
           //Navigator.pushNamed(context, MainView.routeName);
+          showBar(context, state.message);
         }
 
         if (state is SigninFailure) {
