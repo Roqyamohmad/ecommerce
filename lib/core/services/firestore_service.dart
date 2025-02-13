@@ -1,5 +1,3 @@
-import 'package:Ecommerce/features/auth/data/models/user_model.dart';
-
 import 'data_service.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
