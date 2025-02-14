@@ -1,4 +1,5 @@
 import 'package:Ecommerce/core/unitls/app_text_styles.dart';
+import 'package:Ecommerce/core/widgets/notification_widget.dart';
 import 'package:flutter/material.dart';
 
 AppBar buildAppBar(context,
@@ -12,7 +13,7 @@ AppBar buildAppBar(context,
         visible: showNotification,
         child: const Padding(
           padding: EdgeInsets.symmetric(horizontal: 16),
-          // child: NotificationWidget(),
+          child: NotificationWidget(),
         ),
       )
     ],

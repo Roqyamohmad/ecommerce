@@ -1,3 +1,4 @@
+import 'package:Ecommerce/core/helper_function/get_user.dart';
 import 'package:Ecommerce/core/unitls/app_images.dart';
 import 'package:Ecommerce/core/unitls/app_text_styles.dart';
 import 'package:Ecommerce/core/widgets/notification_widget.dart';
@@ -19,7 +20,7 @@ class CustomHomeAppBar extends StatelessWidget {
         ),
       ),
       subtitle: Text(
-        'أخمد مصطفى',
+        getUser().name,
         textAlign: TextAlign.right,
         style: TextStyles.bold16,
       ),

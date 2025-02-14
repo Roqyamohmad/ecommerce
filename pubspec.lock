@@ -141,10 +141,10 @@ packages:
     dependency: "direct main"
     description:
       name: dots_indicator
-      sha256: ad9d452a132016ee7732ac9e49ead015f96e674dbffc4b51789db2783fdbc505
+      sha256: "2a53e0321a3f0d87e38ef30f6e9ff1deb5d6c0e2c5708e057d26cdaa94a95f10"
       url: "https://pub.dev"
     source: hosted
-    version: "4.0.0"
+    version: "3.1.0"
   facebook_auth_desktop:
     dependency: transitive
     description:
